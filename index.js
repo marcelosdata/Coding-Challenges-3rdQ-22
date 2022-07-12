@@ -37,3 +37,38 @@ function countPositivesSumNegatives(input) {
 console.log(countPositivesSumNegatives([4,5,6,-4,-2]))
 
 //explain it
+
+//
+
+/*Return the number (count) of vowels in the given string.
+
+We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+The input string will only consist of lower case letters and/or spaces.
+
+return count of vowels in array
+input will consist on lower cases letters only*/
+
+let countVowels = (arr) =>{
+ let solution = arr.includes("a","e","i","o","u").length
+  return solution
+}
+
+console.log(countVowels(["a","b","c","d","e"]))
+
+//finish and explain it
+/*
+Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.
+Examples
+Input: [1, 5.2, 4, 0, -1]
+Output: 9.2
+Input: []
+Output: 0
+Input: [-2.398]
+Output: -2.398
+*/
+
+let sumArrayElements = arr => arr.reduce((a, acc) => a + acc, 0)
+
+console.log(sumArrayElements([2,3,4]))
+console.log(sumArrayElements([]))
