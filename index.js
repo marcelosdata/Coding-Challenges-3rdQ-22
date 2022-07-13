@@ -72,3 +72,30 @@ let sumArrayElements = arr => arr.reduce((a, acc) => a + acc, 0)
 
 console.log(sumArrayElements([2,3,4]))
 console.log(sumArrayElements([]))
+
+//Implement a function which convert the given boolean value into its string representation.//
+
+function booleanToString(b){
+  //your code here
+  return b === 'true' ? 'true' : 'false'
+}
+
+console.log(booleanToString(false))
+
+/*function booleanToString(b){
+  return b.toString();
+}
+function booleanToString(b){
+  return b ? 'true' : 'false';
+}
+
+*/
+
+function century(year) {
+  let cent = 0
+  return Math.ceil(year/100);
+}
+
+let century2 = (year) => Math.ceil(year/100)
+console.log(century2(1960))
+
