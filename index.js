@@ -99,3 +99,34 @@ function century(year) {
 let century2 = (year) => Math.ceil(year/100)
 console.log(century2(1960))
 
+/*Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+
+The output should be two capital letters with a dot separating them.
+
+It should look like this:
+
+Sam Harris => S.H
+
+patrick feeney => P.F
+
+take a single string separated by space
+toCapitalCase and a dot between them
+*/
+const name = 'Marcelo Salazar'
+
+let abbreviateName = (str) =>{
+  let abb = str.toUpperCase().split(" ")
+  abb = abb[0][0] + "." + abb[1][0]
+
+  return abb
+}
+
+console.log(abbreviateName(name))
+console.log(abbreviateName('valentina salazar'))
+
+let abbreviateTwoWords = (name,last) => {
+  let abb = name.charAt(0).toUpperCase() + "." + last.charAt(0).toUpperCase()
+  return abb
+}
+
+console.log(abbreviateTwoWords('Eichiro','oda'))
