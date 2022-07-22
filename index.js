@@ -130,3 +130,13 @@ let abbreviateTwoWords = (name,last) => {
 }
 
 console.log(abbreviateTwoWords('Eichiro','oda'))
+
+//codewars solution with map
+
+function abbrevName3(name){
+
+    return name.split(' ').map(i => i[0].toUpperCase()).join('.')
+
+}
+
+console.log(abbrevName3('Naruto uzumaki'))
