@@ -140,3 +140,29 @@ function abbrevName3(name){
 }
 
 console.log(abbrevName3('Naruto uzumaki'))
+
+//Create a function that takes in an array of numbers
+//Return a new array of numbers that is every original number squared
+let numbers = [4,400,500]
+
+let squared2 = (arr) => arr.map(a => a*a )
+console.log(squared2(numbers))
+
+//Create a function that takes string
+//Print the reverse of that string to the console
+let reverseWords3 = str =>{
+  let rev = str.split('').reverse().join('')
+  console.log(rev)
+}
+
+reverseWords3('Mamalucha')
+
+
+//Create a function that takes in a string
+//Alert if the string is a palindrome or not
+
+let palindrome2 = str => str === str.split('').reverse().join('') ? alert(`${str.toUpperCase()} it's a Palindrome`) : alert("It's not a Palindrome")
+
+
+palindrome2('polo')
+palindrome2('ama')
