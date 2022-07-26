@@ -173,12 +173,22 @@ Build a function that returns an array of integers from n to 1 where n>0.
 Example : n=5 --> [5,4,3,2,1]
 */
 
-const reverseSeq = n => {
+let reverseSeq = n =>{
   let arr = []
-  for(i=n ;i>0 ; i--){
-    arr.push(i)
+  for(let i=n;i>0;i--){
+  arr.push(i)    
   }
-  return arr;
-};
+    return arr
+}
 
-console.log(reverseSeq(3))
+console.log(reverseSeq(7))
+
+/*Write a function which calculates the average of the numbers in a given list.
+
+Note: Empty arrays should return 0.*/
+function find_average(array) {
+  let sum = array.reduce((a,acc) =>a + acc,0)
+  return array === [] ? 0 : Math.round(sum/array.length) ;
+}
+
+console.log(find_average([20,10,10]))
