@@ -188,7 +188,16 @@ console.log(reverseSeq(7))
 Note: Empty arrays should return 0.*/
 function find_average(array) {
   let sum = array.reduce((a,acc) =>a + acc,0)
-  return array === [] ? 0 : Math.round(sum/array.length) ;
+  return array.length === 0 ? 0 : Math.round(sum/array.length) ;
 }
 
 console.log(find_average([20,10,10]))
+
+//Return a secret message
+
+function greet(name){
+  return name === 'Denisse' ? "Hello, my love!" : `Hello, ${name}!`  
+}
+
+console.log(greet('Adri'))
+console.log(greet('Denisse'))
