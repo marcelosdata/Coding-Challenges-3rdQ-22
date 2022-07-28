@@ -1,3 +1,5 @@
+const log = arg => console.log(arg)
+
 //In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
 /*
 Examples
@@ -201,3 +203,27 @@ function greet(name){
 
 console.log(greet('Adri'))
 console.log(greet('Denisse'))
+
+/*DESCRIPTION:
+In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+
+Examples
+highAndLow("1 2 3 4 5");  // return "5 1"
+highAndLow("1 2 -3 4 5"); // return "5 -3"
+highAndLow("1 9 3 4 -5"); // return "9 -5"
+Notes
+All numbers are valid Int32, no need to validate them.
+There will always be at least one number in the input string.
+Output string must be two numbers separated by a single space, and highest number is first.*/
+//hacer un join por espacios, buscar la manera de que queden separados por como como un array, convertirlos a numeros, ordenarlos de menor a mayor con sort, luego elegir el del primer indice y el ultimo, convertirlos a string y separarlos por un espacio al retornar
+
+const numString = '4 5 3 11 20 10'
+
+let highAndLowNumbers = num =>{
+  //return typeof +num.split(" ")[0]
+  let selection = num.split(" ")
+  let filter =  selection.map(a =>Number(a)).sort((a,b) => b-a)
+  return filter[0] + " " + filter[filter.length -1]
+}
+
+log(highAndLowNumbers(numString))
