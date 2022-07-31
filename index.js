@@ -227,3 +227,27 @@ let highAndLowNumbers = num =>{
 }
 
 log(highAndLowNumbers(numString))
+
+//class constructor for netflix show
+class NetflixShows {
+  constructor(title,genere,mainActor,releaseDate){
+    this.title = title
+    this.genere = genere
+    this.mainActor = mainActor
+    this.releaseDate = releaseDate
+  }
+
+    saveToPlaylist(){
+      console.log('Saved to fav List')
+    }
+     slogan(){
+      console.log(`The best movie this summer is ${this.title}`)
+    }
+
+     featuring(){
+      alert(`Featuring ${this.mainActor} as a main role for ${this.title} on ${this.releaseDate}`)
+    }
+}
+
+let secretVampires = new NetflixShows('Secret Vampires',['Vampires','Terror'],'Robert Pattison','August 24th 2022')
+
