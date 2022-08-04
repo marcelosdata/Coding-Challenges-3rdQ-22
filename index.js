@@ -282,17 +282,56 @@ Kata.getMiddle("middle") should return "dd"
 
 Kata.getMiddle("A") should return "A"*/
 
-let name1 = 'pedro'
+let name1 = 'pedrosi'
 let name2 = 'lola'
 
-let getMiddleStr = str => {
+let getMiddleStr = str =>{
   let middle = Math.floor(str.length/2)
-  return str.length % 2 !== 0 
-    ? str.slice(middle,middle +1)
-    : str.slice(middle -1,middle +1)
+  return str.length % 2 === 0 
+    ? str.slice(middle -1, middle+1)
+    : str.slice(middle,middle+1)
 }
 
-console.log(getMiddleStr(name1))
-console.log(getMiddleStr(name2))
+log(getMiddleStr(name2))
 
-//console.log(Math.floor(name1.length/2))
+/*Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
+
+For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+
+[10, 343445353, 3453445, 3453545353453] should return 3453455.*/
+
+function sumTwoSmallestNumbers(numbers) {  
+  //Code here
+  let orden = numbers.sort((a,b) => a-b)
+  return orden[0] + orden[1]
+}
+
+/*Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+
+Examples input/output:
+
+XO("ooxx") => true
+XO("xooxx") => false
+XO("ooxXm") => true
+XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+XO("zzoo") => false*/
+
+let str1 = 'xoXo'
+let str2 = 'oxo'
+let str3 = "zpzpzp"
+
+let XO = str => {
+  let partir = str.split('')
+  let seleccion_X =  partir.filter(a => a.toLowerCase() === 'x'.toLocaleLowerCase() ).length
+  let seleccion_O =  partir.filter(a => a.toLowerCase() === 'o'.toLocaleLowerCase() ).length
+
+  return seleccion_O === seleccion_X ? true : false
+}
+
+console.log(XO(str3))
+
+const XO2 = str => {
+  str = str.toLowerCase().split('');
+  return str.filter(x => x === 'x').length === str.filter(x => x === 'o').length;
+}
+
