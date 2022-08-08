@@ -335,3 +335,32 @@ const XO2 = str => {
   return str.filter(x => x === 'x').length === str.filter(x => x === 'o').length;
 }
 
+/*
+Trolls are attacking your comment section!
+
+A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+
+Your task is to write a function that takes a string and return a new string with all vowels removed.
+
+For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+Note: for this kata y isn't considered a vowel.*/
+
+const trol = "This website is for losers LOL!"
+
+
+function disemvowel2(str){
+  let vowels = ["a","e","i","o","u"] //vowels available
+  return str
+    .split('')  //split to get an array of strings separated 
+    .filter(letter => !vowels.includes(letter.toLowerCase())) //filter applied to the splited str, then add bang op ! to say that is not there .. the include of filter iterator, lowercased
+    .join('');   //finally joined to make a string again
+}
+
+
+console.log(disemvowel2(trol))
+
+function disemvowel(str) {
+  return str.replace(/[aeiou]/gi, '');
+}
+
+console.log(trol.includes("i"))
