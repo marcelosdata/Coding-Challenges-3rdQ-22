@@ -32,11 +32,11 @@ function countPositivesSumNegatives(input) {
 } */
 
 function countPositivesSumNegatives(input) {
-    return (input === null || input < 1) ? [] :
-    [input.filter(e => e > 0 ).length  ,input.filter(e => e < 0).reduce((acc,c) => acc + c,0)  ]
+  return (input === null || input < 1) ? [] :
+    [input.filter(e => e > 0).length, input.filter(e => e < 0).reduce((acc, c) => acc + c, 0)]
     ;
 }
-console.log(countPositivesSumNegatives([4,5,6,-4,-2]))
+console.log(countPositivesSumNegatives([4, 5, 6, -4, -2]))
 
 //explain it
 
@@ -51,12 +51,12 @@ The input string will only consist of lower case letters and/or spaces.
 return count of vowels in array
 input will consist on lower cases letters only*/
 
-let countVowels = (arr) =>{
- let solution = arr.includes("a","e","i","o","u").length
+let countVowels = (arr) => {
+  let solution = arr.includes("a", "e", "i", "o", "u").length
   return solution
 }
 
-console.log(countVowels(["a","b","c","d","e"]))
+console.log(countVowels(["a", "b", "c", "d", "e"]))
 
 //finish and explain it
 /*
@@ -72,12 +72,12 @@ Output: -2.398
 
 let sumArrayElements = arr => arr.reduce((a, acc) => a + acc, 0)
 
-console.log(sumArrayElements([2,3,4]))
+console.log(sumArrayElements([2, 3, 4]))
 console.log(sumArrayElements([]))
 
 //Implement a function which convert the given boolean value into its string representation.//
 
-function booleanToString(b){
+function booleanToString(b) {
   //your code here
   return b === 'true' ? 'true' : 'false'
 }
@@ -95,10 +95,10 @@ function booleanToString(b){
 
 function century(year) {
   let cent = 0
-  return Math.ceil(year/100);
+  return Math.ceil(year / 100);
 }
 
-let century2 = (year) => Math.ceil(year/100)
+let century2 = (year) => Math.ceil(year / 100)
 console.log(century2(1960))
 
 /*Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
@@ -116,7 +116,7 @@ toCapitalCase and a dot between them
 */
 const name = 'Marcelo Salazar'
 
-let abbreviateName = (str) =>{
+let abbreviateName = (str) => {
   let abb = str.toUpperCase().split(" ")
   abb = abb[0][0] + "." + abb[1][0]
 
@@ -126,18 +126,18 @@ let abbreviateName = (str) =>{
 console.log(abbreviateName(name))
 console.log(abbreviateName('valentina salazar'))
 
-let abbreviateTwoWords = (name,last) => {
+let abbreviateTwoWords = (name, last) => {
   let abb = name.charAt(0).toUpperCase() + "." + last.charAt(0).toUpperCase()
   return abb
 }
 
-console.log(abbreviateTwoWords('Eichiro','oda'))
+console.log(abbreviateTwoWords('Eichiro', 'oda'))
 
 //codewars solution with map
 
-function abbrevName3(name){
+function abbrevName3(name) {
 
-    return name.split(' ').map(i => i[0].toUpperCase()).join('.')
+  return name.split(' ').map(i => i[0].toUpperCase()).join('.')
 
 }
 
@@ -145,14 +145,14 @@ console.log(abbrevName3('Naruto uzumaki'))
 
 //Create a function that takes in an array of numbers
 //Return a new array of numbers that is every original number squared
-let numbers = [4,400,500]
+let numbers = [4, 400, 500]
 
-let squared2 = (arr) => arr.map(a => a*a )
+let squared2 = (arr) => arr.map(a => a * a)
 console.log(squared2(numbers))
 
 //Create a function that takes string
 //Print the reverse of that string to the console
-let reverseWords3 = str =>{
+let reverseWords3 = str => {
   let rev = str.split('').reverse().join('')
   console.log(rev)
 }
@@ -175,12 +175,12 @@ Build a function that returns an array of integers from n to 1 where n>0.
 Example : n=5 --> [5,4,3,2,1]
 */
 
-let reverseSeq = n =>{
+let reverseSeq = n => {
   let arr = []
-  for(let i=n;i>0;i--){
-  arr.push(i)    
+  for (let i = n; i > 0; i--) {
+    arr.push(i)
   }
-    return arr
+  return arr
 }
 
 console.log(reverseSeq(7))
@@ -189,16 +189,16 @@ console.log(reverseSeq(7))
 
 Note: Empty arrays should return 0.*/
 function find_average(array) {
-  let sum = array.reduce((a,acc) =>a + acc,0)
-  return array.length === 0 ? 0 : Math.round(sum/array.length) ;
+  let sum = array.reduce((a, acc) => a + acc, 0)
+  return array.length === 0 ? 0 : Math.round(sum / array.length);
 }
 
-console.log(find_average([20,10,10]))
+console.log(find_average([20, 10, 10]))
 
 //Return a secret message
 
-function greet(name){
-  return name === 'Denisse' ? "Hello, my love!" : `Hello, ${name}!`  
+function greet(name) {
+  return name === 'Denisse' ? "Hello, my love!" : `Hello, ${name}!`
 }
 
 console.log(greet('Adri'))
@@ -219,37 +219,37 @@ Output string must be two numbers separated by a single space, and highest numbe
 
 const numString = '4 5 3 11 20 10'
 
-let highAndLowNumbers = num =>{
+let highAndLowNumbers = num => {
   //return typeof +num.split(" ")[0]
   let selection = num.split(" ")
-  let filter =  selection.map(a =>Number(a)).sort((a,b) => b-a)
-  return filter[0] + " " + filter[filter.length -1]
+  let filter = selection.map(a => Number(a)).sort((a, b) => b - a)
+  return filter[0] + " " + filter[filter.length - 1]
 }
 
 log(highAndLowNumbers(numString))
 
 //class constructor for netflix show
 class NetflixShows {
-  constructor(title,genere,mainActor,releaseDate){
+  constructor(title, genere, mainActor, releaseDate) {
     this.title = title
     this.genere = genere
     this.mainActor = mainActor
     this.releaseDate = releaseDate
   }
 
-    saveToPlaylist(){
-      console.log('Saved to fav List')
-    }
-     slogan(){
-      console.log(`The best movie this summer is ${this.title}`)
-    }
+  saveToPlaylist() {
+    console.log('Saved to fav List')
+  }
+  slogan() {
+    console.log(`The best movie this summer is ${this.title}`)
+  }
 
-     featuring(){
-      alert(`Featuring ${this.mainActor} as a main role for ${this.title} on ${this.releaseDate}`)
-    }
+  featuring() {
+    alert(`Featuring ${this.mainActor} as a main role for ${this.title} on ${this.releaseDate}`)
+  }
 }
 
-let secretVampires = new NetflixShows('Secret Vampires',['Vampires','Terror'],'Robert Pattison','August 24th 2022')
+let secretVampires = new NetflixShows('Secret Vampires', ['Vampires', 'Terror'], 'Robert Pattison', 'August 24th 2022')
 
 /*
 In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
@@ -261,10 +261,10 @@ filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
 //function, return a new list(map), strings filtered(use array method filter condition)
 */
 
-let filter_list = [1,2,'aasf','1','123',123]
+let filter_list = [1, 2, 'aasf', '1', '123', 123]
 
 let filter = arr => {
-  let filtro = arr.filter(res =>typeof res === 'number' )
+  let filtro = arr.filter(res => typeof res === 'number')
   return filtro
 }
 
@@ -285,11 +285,11 @@ Kata.getMiddle("A") should return "A"*/
 let name1 = 'pedrosi'
 let name2 = 'lola'
 
-let getMiddleStr = str =>{
-  let middle = Math.floor(str.length/2)
-  return str.length % 2 === 0 
-    ? str.slice(middle -1, middle+1)
-    : str.slice(middle,middle+1)
+let getMiddleStr = str => {
+  let middle = Math.floor(str.length / 2)
+  return str.length % 2 === 0
+    ? str.slice(middle - 1, middle + 1)
+    : str.slice(middle, middle + 1)
 }
 
 log(getMiddleStr(name2))
@@ -300,9 +300,9 @@ For example, when an array is passed like [19, 5, 42, 2, 77], the output should 
 
 [10, 343445353, 3453445, 3453545353453] should return 3453455.*/
 
-function sumTwoSmallestNumbers(numbers) {  
+function sumTwoSmallestNumbers(numbers) {
   //Code here
-  let orden = numbers.sort((a,b) => a-b)
+  let orden = numbers.sort((a, b) => a - b)
   return orden[0] + orden[1]
 }
 
@@ -322,8 +322,8 @@ let str3 = "zpzpzp"
 
 let XO = str => {
   let partir = str.split('')
-  let seleccion_X =  partir.filter(a => a.toLowerCase() === 'x'.toLocaleLowerCase() ).length
-  let seleccion_O =  partir.filter(a => a.toLowerCase() === 'o'.toLocaleLowerCase() ).length
+  let seleccion_X = partir.filter(a => a.toLowerCase() === 'x'.toLocaleLowerCase()).length
+  let seleccion_O = partir.filter(a => a.toLowerCase() === 'o'.toLocaleLowerCase()).length
 
   return seleccion_O === seleccion_X ? true : false
 }
@@ -348,8 +348,8 @@ Note: for this kata y isn't considered a vowel.*/
 const trol = "This website is for losers LOL!"
 
 
-function disemvowel2(str){
-  let vowels = ["a","e","i","o","u"] //vowels available
+function disemvowel2(str) {
+  let vowels = ["a", "e", "i", "o", "u"] //vowels available
   return str
     .split('')  //split to get an array of strings separated 
     .filter(letter => !vowels.includes(letter.toLowerCase())) //filter applied to the splited str, then add bang op ! to say that is not there .. the include of filter iterator, lowercased
@@ -364,3 +364,23 @@ function disemvowel(str) {
 }
 
 console.log(trol.includes("i"))
+
+/*This time no story, no theory. The examples below show you how to write function accum:
+
+Examples:
+accum("abcd") -> "A-Bb-Ccc-Dddd"
+accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+accum("cwAt") -> "C-Ww-Aaa-Tttt"
+The parameter of accum is a string which includes only letters from a..z and A..Z.*/
+
+let wild = "abcd"
+
+let accum = str => {
+  let res = str.toLowerCase().split('')
+  let conteo = res.map((a,i)=> a.toUpperCase() + a.repeat(i) )
+  return conteo.join("-")
+
+}
+
+console.log(accum(wild))
+
