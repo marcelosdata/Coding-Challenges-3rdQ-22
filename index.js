@@ -397,3 +397,22 @@ Examples
 "Nananananananananananananananana Batman!"
 -->"####################################man!"*/
 
+const pass1 = 'banana'
+const pass2 = 'ban'
+const pass3 = 'getsuga-tenshou'
+
+const maskify2 = str =>{
+    let arr = str.split('')
+  let trans1 = arr.slice(0,arr.length - 4)
+  return arr.length < 4 ? str : trans1.map(a => '#').join('') + arr.slice(-4,str.length).join('')
+}
+
+log(maskify2(pass3))
+
+function maskify1(cc) {
+  return cc.slice(-4).padStart(cc.length,'#')
+}
+
+function maskif3(cc) {
+  return cc.slice(0, -4).replace(/./g, '#') + cc.slice(-4);
+}
