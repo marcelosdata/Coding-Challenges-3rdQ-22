@@ -416,3 +416,12 @@ function maskify1(cc) {
 function maskif3(cc) {
   return cc.slice(0, -4).replace(/./g, '#') + cc.slice(-4);
 }
+
+/*An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+
+Example: (Input --> Output)
+
+"Dermatoglyphics" --> true
+"aba" --> false
+"moOse" --> false (ignore letter case)*/
+
