@@ -425,3 +425,17 @@ Example: (Input --> Output)
 "aba" --> false
 "moOse" --> false (ignore letter case)*/
 
+const iso1= 'aba'
+const iso2 = 'Dermatoglyphics'
+  const iso3 = 'moOse' 
+
+function isIsogram(word){
+  //...
+    word = word.toLowerCase().split("").sort();
+  for (var i=0;i<word.length-1;i++){
+    if (word[i]==word[i+1]) return false;
+    }
+  return true;
+}
+
+console.log(isIsogram(iso1))
