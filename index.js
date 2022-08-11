@@ -439,3 +439,21 @@ function isIsogram(word){
 }
 
 console.log(isIsogram(iso1))
+
+/**/
+
+let arreglo = [1,3,4,5,7,8]
+
+function cubeOdd(arr) {
+  let sumaOdd = []
+// insert code here >.<
+for(let i = 0; i< arr.length; i++){
+  if(arr[i] % 2 !== 0){
+    sumaOdd += Number(arr[i])
+  }
+}
+
+return sumaOdd;
+}
+
+console.log(cubeOdd(arreglo))
