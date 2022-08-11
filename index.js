@@ -442,18 +442,24 @@ console.log(isIsogram(iso1))
 
 /**/
 
-let arreglo = [1,3,4,5,7,8]
+let arreglo = [1,2,3,4,]
 
 function cubeOdd(arr) {
-  let sumaOdd = []
+  let sumaOdd = 0
 // insert code here >.<
-for(let i = 0; i< arr.length; i++){
+for(let i = 0; i < arr.length; i++){
   if(arr[i] % 2 !== 0){
-    sumaOdd += Number(arr[i])
+    sumaOdd += Number(Math.pow(arr[i],3))
   }
 }
 
-return sumaOdd;
+return typeof sumaOdd == 'number' ? sumaOdd : 0;
 }
 
 console.log(cubeOdd(arreglo))
+
+function cubeOdd2(arr) {
+  arr = arr.filter((num) => {return num % 2 != 0});
+  arr = arr.reduce((a, b) => a + Math.pow(b, 3), 0);
+  return isNaN(arr) ? undefined : arr;
+}
