@@ -493,3 +493,16 @@ Examples
 25  =>  true
 26  =>  false*/
 
+//i receive a integer
+// return true or false
+//if the value n has a perfect square , like if 25 is 5*5, 
+
+function isSquare(n) {
+  return Math.sqrt(n) % 1 === 0;
+}
+
+console.log(isSquare(4))
+console.log(isSquare(-1))
+console.log(isSquare(20))
+
+console.log(Math.sqrt(25)%1)
