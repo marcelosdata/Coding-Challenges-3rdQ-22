@@ -536,6 +536,14 @@ const sequenceSum = (begin, end, step) => {
     suma += i
   }
   return suma
-};
+}
 
 log(sequenceSum(2,6,2))
+
+/*
+*/
+
+function addBinary(a,b){
+  return (a+b).toString(2)
+}
+
