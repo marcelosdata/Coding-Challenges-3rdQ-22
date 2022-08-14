@@ -505,4 +505,37 @@ console.log(isSquare(4))
 console.log(isSquare(-1))
 console.log(isSquare(20))
 
-console.log(Math.sqrt(25)%1)
+//console.log(Math.sqrt(25)%1)
+
+/*
+Your task is to make function, which returns the sum of a sequence of integers.
+
+The sequence is defined by 3 non-negative values: begin, end, step (inclusive).
+If begin value is greater than the end, function should returns 0
+
+Examples
+2,2,2 --> 2
+2,6,2 --> 12 (2 + 4 + 6)
+1,5,1 --> 15 (1 + 2 + 3 + 4 + 5)
+1,5,3  --> 5 (1 + 4)
+
+Count from begin to end with step increment.
+
+sequenceSum(begin=0,end=45,step=5) 0+5+10+15+20+25+30+35+40+45 == 225
+
+input a begin, and end and the step
+return the sum of sequence. (I have to sum those sequence that reach the end "sequence")
+non-negative and integer values are able
+
+*/
+
+const sequenceSum = (begin, end, step) => {
+  // May the Force be with you
+  let suma = 0
+  for(let i = begin; i <= end; i += step){
+    suma += i
+  }
+  return suma
+};
+
+log(sequenceSum(2,6,2))
