@@ -558,6 +558,15 @@ i.e.
 
 friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"]
 Note: keep the original order of the names in the output.
-
-
 */
+
+const amigos = ["Ryan", "Kieran", "Jason", "Yous"]
+
+const friend = friends => {
+  let result = friends.filter( a => a.length === 4 )
+  return result
+}
+
+const friend2 = friends => friends.filter( a => a.length === 4 )
+
+log(friend(amigos))
