@@ -599,3 +599,12 @@ Examples (Input --> Output)
 [1]         --> [1,1]
 Remarks
 All arrays or lists will always have at least one element, so you don't need to check the length. Also, your function will always get an array or a list, you don't have to check for null, undefined or similar.*/
+
+const value = [1,2,3,4,5]
+
+function minMax(arr){
+  let orden = arr.sort((a,b) => a - b)
+  return [orden[0],orden[orden.length - 1]]
+}
+
+log(minMax(value))
