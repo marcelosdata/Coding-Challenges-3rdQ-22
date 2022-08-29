@@ -642,3 +642,24 @@ Implement the function which takes an array containing the names of people that 
 ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
 ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
 Note: For 4 or more names, the number in "and 2 others" simply increases.*/
+
+const fbNames = ["Alex","Valen", "Jacob", "Mark", "Max"]
+const fbNames1 = []
+
+function like(names) {
+  
+  const likeThis = "likes this"
+  if(names.length == 0) {
+    return "no one likes this"
+  } else if(names.length == 1 ){
+    return `${names[0]} ${likeThis}`
+  } else if(names.length == 2 ){
+    return `${names[0]} and ${names[1]} ${likeThis}`
+  } else if(names.length == 3 ){
+    return `${names[0]}, ${names[1]} and ${names[2]} ${likeThis}`
+  } else if(names.length >= 4 ) {
+    return `${names[0]}, ${names[1]} and ${names.length - 2} others ${likeThis}`
+  }
+}
+
+console.log(like(fbNames))
