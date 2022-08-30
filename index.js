@@ -713,4 +713,43 @@ If anything in the text isn't a letter, ignore it and don't return it.
 Example
 alphabetPosition("The sunset sets at twelve o' clock.")
 Should return "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11" ( as a string )
+
+my input are string letters,
+ignore anything that is not a letter
+return the positions of letters in the alphabet as string separated by a space
 */
+
+
+let stringPractice = "The sunset sets at twelve o' clock."
+
+const alphabetPosition = str => {
+  let result = ""
+  for(let i = 0; i < str.length ; i++){
+    let code = str.toUpperCase().charCodeAt(i)
+    if(code > 64 && code < 91  ) {
+      result += (code - 64) + " "
+    }
+  } 
+  return result.slice(0, result.length - 1)
+}
+
+log(alphabetPosition(stringPractice))
+
+/*function alphabetPosition(text) {
+  return text
+    .toUpperCase()
+    .match(/[a-z]/gi)
+    .map( (c) => c.charCodeAt() - 64)
+    .join(' ');
+}*/
+//let alphabetPosition = (text) => text.toUpperCase().replace(/[^A-Z]/g, '').split('').map(ch => ch.charCodeAt(0) - 64).join(' ');
+/*function alphabetPosition(text) {
+  const letters = text.split('')
+  const result = letters.map((l, ix) => {
+    const code = l.toUpperCase().charCodeAt() - 64
+    if (l.length && code > 0 && code <= 26) {
+      return code  
+    }
+  })
+  return result.join(' ').replace(/\s+/g, ' ').trim()
+}*/
