@@ -732,7 +732,22 @@ const alphabetPosition = str => {
   } 
   return result.slice(0, result.length - 1)
 }
+///////////////////////////////////
 
+const str_Ag31 = "The sunset"
+
+let replaceStr2 = str => {
+  let results = ""
+  for(let i = 0; i < str.length ; i++){
+    let code = str.toUpperCase().charCodeAt(i)
+    if(code > 64 && code < 91 ) {
+      results += (code - 64) + " "
+    }
+  }
+  return results.trim()
+}
+
+log(replaceStr2('abcc'))
 log(alphabetPosition(stringPractice))
 
 /* STUDY THESE ONES
@@ -766,3 +781,34 @@ Examples
 [1,1,2] should return 2, because it occurs 1 time (which is odd).
 [0,1,0,1,0] should return 0, because it occurs 3 times (which is odd).
 [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).*/
+
+
+let oddArr = [1,1,2];
+
+function findOdd(arr) {  
+  let newResult = []
+
+  for(let i = 0; i < arr.length ; i++){
+      if(arr.filter(a => a == arr[i]).length % 2 !== 0) {
+        return arr[i]
+      } 
+    }  return 0 
+}
+
+
+log(findOdd(oddArr))
+
+//const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
+
+/*function findOdd(A) {
+  for(var i = 0; i < A.length; i++){  
+    //Query the number of times that this 'i' element appears
+    //then verify if that number of times is odd. If it is true, then return
+    //that 'i' element
+    if((A.filter(function(item){return item == A[i]; })).length % 2 != 0){
+      return A[i];
+    }
+  }
+  return 0;
+}*/
+
