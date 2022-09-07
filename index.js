@@ -826,8 +826,34 @@ let removeHashtag = str => {
 
 }
 
-console.log(removeHashtag(strHashtag))
+//console.log(removeHashtag(strHashtag))
 
 function removeUrlAnchor(url){
   return url.split('#')[0];
 }
+
+/*Complete the function caffeineBuzz, which takes a non-zero integer as its argument.
+
+If the integer is divisible by 3, return the string "Java".
+
+If the integer is divisible by 3 and divisible by 4, return the string "Coffee"
+
+If one of the condition above is true and the integer is even, add "Script" to the end of the string.
+
+If none of the condition is true, return the string "mocha_missing!"*/
+
+function caffeineBuzz(n){
+  let str
+  if((n % 3 == 0 && n % 4 == 0)){
+    str = "Coffee"
+  } else if (n % 3 == 0) {
+    str = "Java"
+  } else {
+    str = "mocha_missing!"
+  }
+   return (n % 3 == 0 && n % 2 == 0)
+    ? str += "Script"
+    : str
+}
+
+log(caffeineBuzz(9))
