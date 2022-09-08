@@ -857,3 +857,31 @@ function caffeineBuzz(n){
 }
 
 log(caffeineBuzz(9))
+
+/*Some really funny web dev gave you a sequence of numbers from his API response as an sequence of strings!
+
+You need to cast the whole array to the correct type.
+
+Create the function that takes as a parameter a sequence of numbers represented as strings and outputs a sequence of numbers.
+
+ie:["1", "2", "3"] to [1, 2, 3]
+
+Note that you can receive floats as well.*/
+
+function toNumberArray(stringarray){
+  return stringarray.map(a=> Number(a))
+}
+
+/*Given a string of words (x), you need to return an array of the words, sorted alphabetically by the final character in each.
+
+If two words have the same last letter, they returned array should show them in the order they appeared in the given string.
+
+All inputs will be valid.*/
+
+const wordsStr = 'take me to semynak'
+
+let last = x => {
+ return x.split(' ').sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
+}
+
+console.log(last(wordsStr))
