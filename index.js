@@ -897,12 +897,18 @@ Examples
 "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
 ""  -->  ""*/
 const strOrder = "is2 Thi1s T4est 3a"
+const strOrder2 = "4of Fo1r pe6ople g3ood th5e the2"
 
 let order = words => {
   let sep = words.split(" ")
-  return sep
+  let orden = sep.sort((a,b) => Number(a.match(/\d+/)[0]) - Number(b.match(/\d+/)[0]) )
+    return orden.join(" ")
 }
 
 log(order(strOrder))
+log(order(strOrder2))
+
+let ordTry = "is2"
+log(ordTry.match(/\d+/)[0])
 
 
