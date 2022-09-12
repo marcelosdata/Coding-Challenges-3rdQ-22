@@ -901,7 +901,7 @@ const strOrder2 = "4of Fo1r pe6ople g3ood th5e the2"
 
 let order = words => {
   let sep = words.split(" ")
-  let orden = sep.sort((a,b) => Number(a.match(/\d+/)[0]) - Number(b.match(/\d+/)[0]) )
+  let orden = sep.sort((a,b) => Number(a.match(/\d+/)) - Number(b.match(/\d+/)) )
     return orden.join(" ")
 }
 
@@ -912,3 +912,14 @@ let ordTry = "is2"
 log(ordTry.match(/\d+/)[0])
 
 
+/*You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+
+#Examples:
+
+Kata.getMiddle("test") should return "es"
+
+Kata.getMiddle("testing") should return "t"
+
+Kata.getMiddle("middle") should return "dd"
+
+Kata.getMiddle("A") should return "A"*/
