@@ -923,3 +923,41 @@ Kata.getMiddle("testing") should return "t"
 Kata.getMiddle("middle") should return "dd"
 
 Kata.getMiddle("A") should return "A"*/
+
+const middle3 = 'testing'
+const middle4 = 'middle'
+
+let getMiddle3 = str => {
+  let middle = Math.floor(str.length / 2)
+  return str.length % 2 == 0 
+    ? str.slice(middle -1 , middle +1) 
+    : str.slice(middle , middle +1 )
+                
+}
+
+log(getMiddle3(middle3))
+log(getMiddle3(middle4))
+
+
+/*
+Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010) and After Earth (2013). Jaden is also known for some of his philosophy that he delivers via Twitter. When writing on Twitter, he is known for almost always capitalizing every word. For simplicity, you'll have to capitalize each word, check out how contractions are expected to be in the example below.
+
+Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
+
+Example:
+
+Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
+Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"*/
+
+let exampleNonJaden = "How can mirrors be real if our eyes aren't real"
+
+const toJadenCase = str => {
+  let sol = str.split(" ").map(a => a[0].toUpperCase() + a.slice(1))
+  return sol.join(" ")
+}
+
+log(toJadenCase(exampleNonJaden))
+
+//log(exampleNonJaden.split(" ")[0].slice(2))
+
+
