@@ -951,13 +951,24 @@ Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"*/
 
 let exampleNonJaden = "How can mirrors be real if our eyes aren't real"
 
-const toJadenCase = str => {
+const toJadenCase1 = str => {
   let sol = str.split(" ").map(a => a[0].toUpperCase() + a.slice(1))
   return sol.join(" ")
 }
 
-log(toJadenCase(exampleNonJaden))
+log(toJadenCase1(exampleNonJaden))
 
 //log(exampleNonJaden.split(" ")[0].slice(2))
 
+String.prototype.toJadenCase = function () { 
+  return this.split(" ").map(function(word){
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  }).join(" ");
+}
+
+
+function abbrevName3(name){
+  let abr = name.toUpperCase().split(" ")
+  return abr = abr[0][0] + "." + abr[1][0]
+}
 
