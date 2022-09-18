@@ -1000,5 +1000,25 @@ The returned f*/
 const phoneNumber = [7, 3, 2, 8, 5, 6, 1, 8, 5, 0]
 
 let createPhoneNumber = arr => {
-  
+  let prefix = arr.slice(0,3).join("")
+  let part1 = arr.slice(3,6).join("")
+  let part2 = arr.slice(6,10).join("")
+    return `(${prefix}) ${part1}-${part2}`
+}
+
+log(createPhoneNumber(phoneNumber))
+
+
+/*Given a string of words, you need to find the highest scoring word.
+
+Each letter of a word scores points according to its position in the alphabet: a = 1, b = 2, c = 3 etc.
+
+You need to return the highest scoring word as a string.
+
+If two words score the same, return the word that appears earliest in the original string.
+
+All letters will be lowercase and all inputs will be valid.*/
+
+function high(x){
+
 }
