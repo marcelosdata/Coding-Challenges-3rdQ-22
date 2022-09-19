@@ -1017,8 +1017,60 @@ You need to return the highest scoring word as a string.
 
 If two words score the same, return the word that appears earliest in the original string.
 
-All letters will be lowercase and all inputs will be valid.*/
+All letters will be lowercase and all inputs will be valid.
+*/
 
+let quantityStr = 'man i need a taxi up to managua'
+
+/*
 function high(x){
+  let solucion = ""
+  for (let i = 0; i < x.length; i++) {
+    let code = x.charCodeAt(i)
+    if(code > 97 && code < 123  ){
+      solucion += code - 96 
+    }
+  }
+}*/
 
+let arrTesthigh = ['man','a']
+
+let high2 = x => {
+  let newArr = []
+  
+  let solucion = 0
+  let str = x.join("") 
+  for (let i = 0 ; i< str.length ; i++) {
+    let code = str.charCodeAt(i)
+    solucion += (code - 96)
+    } return solucion  
+
+  //newArr.maxindex
 }
+
+console.log(high2(arrTesthigh))
+
+/*function high(x) {
+
+    const wordArray = x.split(' ');
+    const wordScoreArray = wordArray.map(x => x.split('').reduce((sum, x) =>  sum + x.charCodeAt(0) - 96, 0));
+    
+    const max = Math.max(...wordScoreArray);
+    const index = wordScoreArray.indexOf(max);
+
+    return wordArray[index];
+}*/
+/*const score = (word) =>
+  word
+    .split('')
+    .reduce((sum, letter) => sum + letter.charCodeAt(0) - 96, 0);
+
+const high = (x) =>
+  x
+    .split(' ')
+    .reduce((bestWord, currentWord) => {
+      const wordScore = score(currentWord);
+      const highestScore = score(bestWord);
+
+      return wordScore > highestScore ? currentWord : bestWord;
+    });*/
