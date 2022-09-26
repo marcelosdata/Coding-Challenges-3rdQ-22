@@ -1089,3 +1089,17 @@ Examples
 * Input: [1,2,3,4,5], output= [2,3,4,5]
 * Input: [5,3,2,1,4], output = [5,3,2,4]
 * Input: [2,2,1,2,1], output = [2,2,2,1]*/
+
+let smallInt1 = [1,2,3,4,5];
+
+function removeSmallest1(numbers) {
+  const min = Math.min.apply(this, numbers);
+  return numbers.filter((num, idx, arr) => idx !== arr.indexOf(min));
+}
+
+const removeSmallest2 = numbers => numbers.filter((n,i) => i !== numbers.indexOf(Math.min(...numbers)));
+
+function removeSmallest3(numbers) {
+  let indexOfMin = numbers.indexOf(Math.min(...numbers));
+  return numbers.filter((a, b)=> b !== indexOfMin);
+}
