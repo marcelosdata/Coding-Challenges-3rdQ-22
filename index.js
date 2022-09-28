@@ -1104,3 +1104,12 @@ function removeSmallest3(numbers) {
   let indexOfMin = numbers.indexOf(Math.min(...numbers));
   return numbers.filter((a, b)=> b !== indexOfMin);
 }
+
+//Practicing Get Initials
+
+function abbrevNamePractice(name){
+
+  let code = name.toUpperCase().split(" ")
+  return code[0][0] + "." + code[1][0]
+
+}
