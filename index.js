@@ -282,17 +282,18 @@ Kata.getMiddle("middle") should return "dd"
 
 Kata.getMiddle("A") should return "A"*/
 
-let name1 = 'pedrosi'
-let name2 = 'lola'
+let nameStr1 = "nami"
+let nameStr2 = "luffy"
 
-let getMiddleStr = str => {
-  let middle = Math.floor(str.length / 2)
-  return str.length % 2 === 0
-    ? str.slice(middle - 1, middle + 1)
-    : str.slice(middle, middle + 1)
+function getMiddle(str) {
+  let code = Math.floor(str.length / 2)
+  return str.length % 2 == 0 
+    ? str.slice(code -1 , code + 1)
+    : str.slice (code , code +1)
 }
 
-log(getMiddleStr(name2))
+console.log(getMiddle(nameStr1))
+console.log(getMiddle(nameStr2))
 
 /*Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
 
